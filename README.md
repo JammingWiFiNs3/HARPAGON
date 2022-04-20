@@ -1,6 +1,6 @@
 # HARPAGON
 
-Code Matematica of HARPAGON attack. 
+Code Mathematica of HARPAGON attack. 
 
 System model: 
 
