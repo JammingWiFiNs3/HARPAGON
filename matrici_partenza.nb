@@ -1,0 +1,267 @@
+(************** Content-type: application/mathematica **************
+                     CreatedBy='Mathematica 5.0'
+
+                    Mathematica-Compatible Notebook
+
+This notebook can be used with any Mathematica-compatible
+application, such as Mathematica, MathReader or Publicon. The data
+for the notebook starts with the line containing stars above.
+
+To get the notebook into a Mathematica-compatible application, do
+one of the following:
+
+* Save the data starting with the line of stars above into a file
+  with a name ending in .nb, then open the file inside the
+  application;
+
+* Copy the data starting with the line of stars above to the
+  clipboard, then use the Paste menu command inside the application.
+
+Data for notebooks contains only printable 7-bit ASCII and can be
+sent directly in email or through ftp in text mode.  Newlines can be
+CR, LF or CRLF (Unix, Macintosh or MS-DOS style).
+
+NOTE: If you modify the data for this notebook not in a Mathematica-
+compatible application, you must delete the line below containing
+the word CacheID, otherwise Mathematica-compatible applications may
+try to use invalid cache data.
+
+For more information on notebooks and Mathematica-compatible 
+applications, contact Wolfram Research:
+  web: http://www.wolfram.com
+  email: info@wolfram.com
+  phone: +1-217-398-0700 (U.S.)
+
+Notebook reader applications are available free of charge from 
+Wolfram Research.
+*******************************************************************)
+
+(*CacheID: 232*)
+
+
+(*NotebookFileLineBreakTest
+NotebookFileLineBreakTest*)
+(*NotebookOptionsPosition[      9778,        204]*)
+(*NotebookOutlinePosition[     10422,        226]*)
+(*  CellTagsIndexPosition[     10378,        222]*)
+(*WindowFrame->Normal*)
+
+
+
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+    \(Q = {{\(-1\)/Ts, 1/Ts, 0, 0}, {0, \(-2\)/Td, 1/Td, 1/Td}, {1/Tr, 
+          0, \(-1\)/Tr, 0}, {1/Tt, 0, 0, \(-1\)/Tt}}\)], "Input"],
+
+Cell[BoxData[
+    \({{\(-\(2.6011560693641633`\/T\)\), 2.6011560693641633`\/T, 0, 
+        0}, {0, \(-\(23.376623376623343`\/T\)\), 11.688311688311671`\/T, 
+        11.688311688311671`\/T}, {1\/Tr, 0, \(-\(1\/Tr\)\), 0}, {1\/Tt, 0, 
+        0, \(-\(1\/Tt\)\)}}\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(MatrixRank[Q]\)], "Input"],
+
+Cell[BoxData[
+    \(3\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(QpUpdate = {{\(-\(2\/Ts\)\), 1\/Ts, 0, 0, 1\/Ts, 0, 0, 0, 0, 0, 0, 0, 
+          0, 0, 0, 0}, {0, \(-\((1\/Ts + 2/Td)\)\), 1/Td, 1/Td, 0, 1/Ts, 0, 
+          0, 0, 0, 0, 0, 0, 0, 0, 0}, {1/Tr, 0, \(-\((1/Tr + 1/Ts)\)\), 0, 0, 
+          0, 1/Ts, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {1/Tt, 0, 
+          0, \(-\((1/Tt + 1/Ts)\)\), 0, 0, 0, 1/Ts, 0, 0, 0, 0, 0, 0, 0, 
+          0}, {0, 0, 0, 0, \(-\((1/Ts + 2/Td)\)\), 1/Ts, 0, 0, 1/Td, 0, 0, 0, 
+          1/Td, 0, 0, 0}, {0, 0, 0, 0, 0, \(-\((4/Td)\)\), 1/Td, 1/Td, 0, 
+          1/Td, 0, 0, 0, 1/Td, 0, 0}, {0, 0, 0, 0, 1/Tr, 
+          0, \(-\((1/Tr + 2/Td)\)\), 0, 0, 0, 1/Td, 0, 0, 0, 1/Td, 0}, {0, 0, 
+          0, 0, 1/Tt, 0, 0, \(-\((1/Tt + 2/Td)\)\), 0, 0, 0, 1/Td, 0, 0, 0, 
+          1/Td}, {1/Tr, 0, 0, 0, 0, 0, 0, 0, \(-\((1/Tr + 1/Ts)\)\), 1/Ts, 0, 
+          0, 0, 0, 0, 0}, {0, 1/Tr, 0, 0, 0, 0, 0, 0, 
+          0, \(-\((1/Tr + 2/Td)\)\), 1/Td, 1/Td, 0, 0, 0, 0}, {0, 0, 1/Tr, 0, 
+          0, 0, 0, 0, 1/Tr, 0, \(-2\)/Tr, 0, 0, 0, 0, 0}, {0, 0, 0, 1/Tr, 0, 
+          0, 0, 0, 1/Tt, 0, 0, \(-\((1/Tr + 1/Tt)\)\), 0, 0, 0, 0}, {1/Tt, 0, 
+          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, \(-\((1/Tt + 1/Ts)\)\), 1/Ts, 0, 
+          0}, {0, 1/Tt, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+          0, \(-\((2/Td + 1/Tt)\)\), 1/Td, 1/Td}, {0, 0, 1/Tt, 0, 0, 0, 0, 0, 
+          0, 0, 0, 0, 1/Tr, 0, \(-\((1/Tr + 1/Tt)\)\), 0}, {0, 0, 0, 1/Tt, 0, 
+          0, 0, 0, 0, 0, 0, 0, 1/Tt, 0, 0, \(-2\)/Tt}}\)], "Input"],
+
+Cell[BoxData[
+    \({{\(-\(5.202312138728327`\/T\)\), 2.6011560693641633`\/T, 0, 0, 
+        2.6011560693641633`\/T, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+        0}, {0, \(-\(25.977779445987505`\/T\)\), 11.688311688311671`\/T, 
+        11.688311688311671`\/T, 0, 2.6011560693641633`\/T, 0, 0, 0, 0, 0, 0, 
+        0, 0, 0, 0}, {1\/Tr, 0, \(-\(2.6011560693641633`\/T\)\) - 1\/Tr, 0, 
+        0, 0, 2.6011560693641633`\/T, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {1\/Tt, 0, 
+        0, \(-\(2.6011560693641633`\/T\)\) - 1\/Tt, 0, 0, 0, 
+        2.6011560693641633`\/T, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 
+        0, \(-\(25.977779445987505`\/T\)\), 2.6011560693641633`\/T, 0, 0, 
+        11.688311688311671`\/T, 0, 0, 0, 11.688311688311671`\/T, 0, 0, 
+        0}, {0, 0, 0, 0, 0, \(-\(46.753246753246685`\/T\)\), 
+        11.688311688311671`\/T, 11.688311688311671`\/T, 0, 
+        11.688311688311671`\/T, 0, 0, 0, 11.688311688311671`\/T, 0, 0}, {0, 
+        0, 0, 0, 1\/Tr, 0, \(-\(23.376623376623343`\/T\)\) - 1\/Tr, 0, 0, 0, 
+        11.688311688311671`\/T, 0, 0, 0, 11.688311688311671`\/T, 0}, {0, 0, 
+        0, 0, 1\/Tt, 0, 0, \(-\(23.376623376623343`\/T\)\) - 1\/Tt, 0, 0, 0, 
+        11.688311688311671`\/T, 0, 0, 0, 11.688311688311671`\/T}, {1\/Tr, 0, 
+        0, 0, 0, 0, 0, 0, \(-\(2.6011560693641633`\/T\)\) - 1\/Tr, 
+        2.6011560693641633`\/T, 0, 0, 0, 0, 0, 0}, {0, 1\/Tr, 0, 0, 0, 0, 0, 
+        0, 0, \(-\(23.376623376623343`\/T\)\) - 1\/Tr, 
+        11.688311688311671`\/T, 11.688311688311671`\/T, 0, 0, 0, 0}, {0, 0, 
+        1\/Tr, 0, 0, 0, 0, 0, 1\/Tr, 0, \(-\(2\/Tr\)\), 0, 0, 0, 0, 0}, {0, 
+        0, 0, 1\/Tr, 0, 0, 0, 0, 1\/Tt, 0, 0, \(-\(1\/Tr\)\) - 1\/Tt, 0, 0, 
+        0, 0}, {1\/Tt, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+        0, \(-\(2.6011560693641633`\/T\)\) - 1\/Tt, 2.6011560693641633`\/T, 
+        0, 0}, {0, 1\/Tt, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+        0, \(-\(23.376623376623343`\/T\)\) - 1\/Tt, 11.688311688311671`\/T, 
+        11.688311688311671`\/T}, {0, 0, 1\/Tt, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+        1\/Tr, 0, \(-\(1\/Tr\)\) - 1\/Tt, 0}, {0, 0, 0, 1\/Tt, 0, 0, 0, 0, 0, 
+        0, 0, 0, 1\/Tt, 0, 0, \(-\(2\/Tt\)\)}}\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(QpNoUpdate = {{\(-\(2\/Ts\)\), 1\/Ts, 0, 0, 1\/Ts, 0, 0, 0, 0, 0, 0, 0, 
+          0, 0, 0, 0}, {0, \(-\(2\/Td\)\) - 1\/Ts, 1\/Td, 1\/Td, 0, 1\/Ts, 0, 
+          0, 0, 0, 0, 0, 0, 0, 0, 0}, {1\/Tr, 0, \(-\(1\/Tr\)\) - 1\/Ts, 0, 
+          0, 0, 1\/Ts, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {1\/Tt, 0, 
+          0, \(-\(1\/Ts\)\) - 1\/Tt, 0, 0, 0, 1\/Ts, 0, 0, 0, 0, 0, 0, 0, 
+          0}, {0, 0, 0, 0, \(-\(2\/Td\)\) - 1\/Ts, 1\/Ts, 0, 0, 1\/Td, 0, 0, 
+          0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, \(-\(4\/Td\)\), 1\/Td, 1\/Td, 0, 
+          1\/Td, 0, 0, 0, 1\/Td, 0, 0}, {0, 0, 0, 0, 1\/Tr, 
+          0, \(-\(2\/Td\)\) - 1\/Tr, 0, 0, 0, 1\/Td, 0, 0, 0, 0, 0}, {0, 0, 
+          0, 0, 1\/Tt, 0, 0, \(-\(2\/Td\)\) - 1\/Tt, 0, 0, 0, 1\/Td, 0, 0, 0, 
+          1\/Td}, {1\/Tr, 0, 0, 0, 0, 0, 0, 0, \(-\(1\/Tr\)\) - 1\/Ts, 1\/Ts, 
+          0, 0, 0, 0, 0, 0}, {0, 1\/Tr, 0, 0, 0, 0, 0, 0, 
+          0, \(-\(2\/Td\)\) - 1\/Tr, 1\/Td, 1\/Td, 0, 0, 0, 0}, {0, 0, 1\/Tr, 
+          0, 0, 0, 0, 0, 1\/Tr, 0, \(-\(2\/Tr\)\), 0, 0, 0, 0, 0}, {0, 0, 0, 
+          1\/Tr, 0, 0, 0, 0, 1\/Tt, 0, 0, \(-\(1\/Tr\)\) - 1\/Tt, 0, 0, 0, 
+          0}, {1\/Tt, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1\/Ts, 0, 0}, {0, 
+          1\/Tt, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, \(-\(2\/Td\)\) - 1\/Tt, 0, 
+          1\/Td}, {0, 0, 1\/Tt, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 
+          0, 0, 1\/Tt, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+          0, \(-\(2\/Tt\)\)}}\)], "Input"],
+
+Cell[BoxData[
+    \({{\(-\(5.202312138728327`\/T\)\), 2.6011560693641633`\/T, 0, 0, 
+        2.6011560693641633`\/T, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+        0}, {0, \(-\(25.977779445987505`\/T\)\), 11.688311688311671`\/T, 
+        11.688311688311671`\/T, 0, 2.6011560693641633`\/T, 0, 0, 0, 0, 0, 0, 
+        0, 0, 0, 0}, {1\/Tr, 0, \(-\(2.6011560693641633`\/T\)\) - 1\/Tr, 0, 
+        0, 0, 2.6011560693641633`\/T, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {1\/Tt, 0, 
+        0, \(-\(2.6011560693641633`\/T\)\) - 1\/Tt, 0, 0, 0, 
+        2.6011560693641633`\/T, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 
+        0, \(-\(25.977779445987505`\/T\)\), 2.6011560693641633`\/T, 0, 0, 
+        11.688311688311671`\/T, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 
+        0, \(-\(46.753246753246685`\/T\)\), 11.688311688311671`\/T, 
+        11.688311688311671`\/T, 0, 11.688311688311671`\/T, 0, 0, 0, 
+        11.688311688311671`\/T, 0, 0}, {0, 0, 0, 0, 1\/Tr, 
+        0, \(-\(23.376623376623343`\/T\)\) - 1\/Tr, 0, 0, 0, 
+        11.688311688311671`\/T, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 1\/Tt, 0, 
+        0, \(-\(23.376623376623343`\/T\)\) - 1\/Tt, 0, 0, 0, 
+        11.688311688311671`\/T, 0, 0, 0, 11.688311688311671`\/T}, {1\/Tr, 0, 
+        0, 0, 0, 0, 0, 0, \(-\(2.6011560693641633`\/T\)\) - 1\/Tr, 
+        2.6011560693641633`\/T, 0, 0, 0, 0, 0, 0}, {0, 1\/Tr, 0, 0, 0, 0, 0, 
+        0, 0, \(-\(23.376623376623343`\/T\)\) - 1\/Tr, 
+        11.688311688311671`\/T, 11.688311688311671`\/T, 0, 0, 0, 0}, {0, 0, 
+        1\/Tr, 0, 0, 0, 0, 0, 1\/Tr, 0, \(-\(2\/Tr\)\), 0, 0, 0, 0, 0}, {0, 
+        0, 0, 1\/Tr, 0, 0, 0, 0, 1\/Tt, 0, 0, \(-\(1\/Tr\)\) - 1\/Tt, 0, 0, 
+        0, 0}, {1\/Tt, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+        2.6011560693641633`\/T, 0, 0}, {0, 1\/Tt, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+        0, 0, \(-\(23.376623376623343`\/T\)\) - 1\/Tt, 0, 
+        11.688311688311671`\/T}, {0, 0, 1\/Tt, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+        0, 0, 0}, {0, 0, 0, 1\/Tt, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+        0, \(-\(2\/Tt\)\)}}\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(MatrixRank[QpUpdate]\)], "Input"],
+
+Cell[BoxData[
+    \(15\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(MatrixRank[QpNoUpdate]\)], "Input"],
+
+Cell[BoxData[
+    \(14\)], "Output"]
+}, Open  ]]
+},
+FrontEndVersion->"5.0 for Microsoft Windows",
+ScreenRectangle->{{0, 1280}, {0, 703}},
+WindowSize->{1016, 668},
+WindowMargins->{{0, Automatic}, {Automatic, 0}}
+]
+
+(*******************************************************************
+Cached data follows.  If you edit this Notebook file directly, not
+using Mathematica, you must remove the line containing CacheID at
+the top of  the file.  The cache data will then be recreated when
+you save this file from within Mathematica.
+*******************************************************************)
+
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+
+(*NotebookFileOutline
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[1776, 53, 151, 2, 30, "Input"],
+Cell[1930, 57, 274, 4, 42, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[2241, 66, 46, 1, 30, "Input"],
+Cell[2290, 69, 35, 1, 29, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[2362, 75, 1471, 20, 244, "Input"],
+Cell[3836, 97, 2154, 30, 450, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[6027, 132, 1457, 20, 280, "Input"],
+Cell[7487, 154, 2015, 29, 450, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[9539, 188, 53, 1, 30, "Input"],
+Cell[9595, 191, 36, 1, 29, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[9668, 197, 55, 1, 30, "Input"],
+Cell[9726, 200, 36, 1, 29, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+
+
+(*******************************************************************
+End of Mathematica Notebook file.
+*******************************************************************)
+
